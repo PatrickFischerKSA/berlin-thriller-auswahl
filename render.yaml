@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: berlin-thriller-auswahl
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: "npm start"
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SECRET_KEY
+        sync: false

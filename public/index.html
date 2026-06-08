@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Topographie des Verbrechens - Berlin-Thriller</title>
+    <meta
+      name="description"
+      content="Auswahlformular fuer ein Webspecial mit einem in Berlin vor Ort gedrehten Video."
+    >
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Webspecial</p>
+        <h1>Topographie des Verbrechens - Berlin-Thriller</h1>
+        <p class="lead">
+          Waehlt euren Text fuer ein Webspecial mit einem in Berlin vor Ort gedrehten Video.
+          In der Regel lesen zwei Personen denselben Text, maximal drei.
+        </p>
+      </div>
+      <a class="export-link" href="/api/export" target="_blank" rel="noreferrer">Export</a>
+    </header>
+
+    <main>
+      <section class="form-panel" aria-labelledby="form-title">
+        <div>
+          <p class="eyebrow">Eintrag</p>
+          <h2 id="form-title">Text verbindlich waehlen</h2>
+        </div>
+
+        <form id="selection-form" autocomplete="off">
+          <label>
+            Name
+            <input id="student-name" name="studentName" minlength="2" required placeholder="Vorname Nachname">
+          </label>
+
+          <label>
+            Gruppe / Partner*in
+            <input id="group-name" name="groupName" placeholder="optional">
+          </label>
+
+          <label>
+            Text
+            <select id="text-id" name="textId" required>
+              <option value="">Bitte waehlen</option>
+            </select>
+          </label>
+
+          <label class="check-row">
+            <input id="third-slot-approved" name="thirdSlotApproved" type="checkbox">
+            <span>Dritter Platz ist mit der Lehrperson abgesprochen.</span>
+          </label>
+
+          <button type="submit">Eintrag speichern</button>
+          <p id="form-message" class="message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="list-panel" aria-labelledby="list-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Auswahl</p>
+            <h2 id="list-title">Texte und Belegung</h2>
+          </div>
+          <button id="refresh-button" type="button">Aktualisieren</button>
+        </div>
+        <div id="text-list" class="text-grid"></div>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

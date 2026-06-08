@@ -1,0 +1,66 @@
+[
+  {
+    "id": "nasse-fisch",
+    "title": "Der nasse Fisch",
+    "author": "Volker Kutscher",
+    "context": "Erster Roman der Gereon-Rath-Reihe: illegale Waffenlieferungen an Deutschland aus der UdSSR, Strassenkaempfe in Berlin, spaete Weimarer Republik 1929.",
+    "source": "Carlsen Verlag",
+    "videoLength": "1:07 min"
+  },
+  {
+    "id": "maerzgefallenen",
+    "title": "Die Maerzgefallenen",
+    "author": "Volker Kutscher",
+    "context": "Berlin im Fruehjahr 1933: Kommissar Gereon Rath zwischen Anpassung und Widerstand.",
+    "source": "Buchvorstellung247",
+    "videoLength": "2:45 min"
+  },
+  {
+    "id": "lunapark",
+    "title": "Lunapark",
+    "author": "Volker Kutscher",
+    "context": "Berlin im Jahr 1934: Roehmputsch und Alltag in der sich verfestigenden Diktatur.",
+    "source": "Buchvorstellung247",
+    "videoLength": "2:37 min"
+  },
+  {
+    "id": "olympia",
+    "title": "Olympia",
+    "author": "Volker Kutscher",
+    "context": "Berlin inszeniert 1936 eine Propagandashow und versucht sich im besten Licht zu praesentieren; die Diktatur bleibt bestehen und verschaerft ihre Massnahmen nach den Spielen wieder.",
+    "source": "Hoerbuch Thriller",
+    "videoLength": "8:28 min"
+  },
+  {
+    "id": "wie-sterben-geht",
+    "title": "Wie Sterben geht",
+    "author": "Andreas Pflueger",
+    "context": "Agententhriller um Spione des KGB und des BND; Agentenaustausch auf der Glienicker Bruecke 1980-83.",
+    "source": "Google Play Buecher",
+    "videoLength": "5:25 min"
+  },
+  {
+    "id": "kaelter",
+    "title": "Kaelter",
+    "author": "Andreas Pflueger",
+    "context": "Spionagethriller im Jahr 1989: Mauerfall, BND- und KGB-Spione sowie in der DDR untergetauchte RAF-Terroristen.",
+    "source": "Suhrkamp Verlag",
+    "videoLength": "8:40 min"
+  },
+  {
+    "id": "weisse-nacht",
+    "title": "Die weisse Nacht",
+    "author": "Anne Stern",
+    "context": "Ruinenmoerder 1946 nach dem Kriegsende in Berlin, Stunde Null und beginnender Kalter Krieg.",
+    "source": "Matthias Zehnder",
+    "videoLength": "13:18 min"
+  },
+  {
+    "id": "fraeulein-gold",
+    "title": "Fraeulein Gold, Baende 1 und 2",
+    "author": "Anne Stern",
+    "context": "Schatten und Licht sowie Scheunenkinder: historische Kriminalromane mit Berlin-Bezug.",
+    "source": "HUGENDUBEL",
+    "videoLength": "1:44 min"
+  }
+]
