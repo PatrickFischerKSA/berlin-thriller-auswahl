@@ -53,7 +53,7 @@ begin
   if exists (
     select 1 from public.selections where student_name_norm = v_student_name_norm
   ) then
-    raise exception 'Fuer diesen Namen gibt es bereits einen Eintrag. Bestehende Eintraege werden nicht ueberschrieben.';
+    raise exception 'Für diesen Namen gibt es bereits einen Eintrag. Bestehende Einträge werden nicht überschrieben.';
   end if;
 
   select count(*)
@@ -66,7 +66,7 @@ begin
   end if;
 
   if v_count >= 2 and not coalesce(p_third_slot_approved, false) then
-    raise exception 'Der dritte Platz ist nur nach Absprache gedacht. Bitte bestaetige die Absprache.';
+    raise exception 'Der dritte Platz ist nur nach Absprache gedacht. Bitte bestätige die Absprache.';
   end if;
 
   insert into public.selections (

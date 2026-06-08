@@ -76,7 +76,7 @@ export function createSelection({ texts, entries, payload, now = new Date() }) {
     return {
       ok: false,
       status: 409,
-      message: "Fuer diesen Namen gibt es bereits einen Eintrag. Bestehende Eintraege werden nicht ueberschrieben."
+      message: "Für diesen Namen gibt es bereits einen Eintrag. Bestehende Einträge werden nicht überschrieben."
     };
   }
 
@@ -89,7 +89,7 @@ export function createSelection({ texts, entries, payload, now = new Date() }) {
     return {
       ok: false,
       status: 409,
-      message: "Der dritte Platz ist nur nach Absprache gedacht. Bitte bestaetige die Absprache."
+      message: "Der dritte Platz ist nur nach Absprache gedacht. Bitte bestätige die Absprache."
     };
   }
 

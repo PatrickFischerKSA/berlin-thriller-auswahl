@@ -109,5 +109,5 @@ const server = createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Berlin-Thriller-Auswahl laeuft auf http://localhost:${PORT}`);
+  console.log(`Berlin-Thriller-Auswahl läuft auf http://localhost:${PORT}`);
 });

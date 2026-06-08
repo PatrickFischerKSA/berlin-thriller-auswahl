@@ -32,7 +32,7 @@ function readerLine(readers) {
 
 function renderOptions(texts) {
   const currentValue = textSelect.value;
-  textSelect.innerHTML = '<option value="">Bitte waehlen</option>';
+  textSelect.innerHTML = '<option value="">Bitte wählen</option>';
 
   for (const text of texts) {
     const option = document.createElement("option");
@@ -58,7 +58,7 @@ function renderTexts(texts) {
         ? "voll"
         : text.needsAgreementForNextSlot
           ? "3. Platz nach Absprache"
-          : `${text.regularSpotsLeft} regulaer frei`;
+          : `${text.regularSpotsLeft} regulär frei`;
 
       return `
         <article class="text-card ${stateClass}">
@@ -115,7 +115,7 @@ form.addEventListener("submit", async (event) => {
     }
 
     form.reset();
-    setMessage("Gespeichert. Dein Eintrag ist jetzt reserviert und kann nicht durch andere ueberschrieben werden.");
+    setMessage("Gespeichert. Dein Eintrag ist jetzt reserviert und kann nicht durch andere überschrieben werden.");
     await loadStatus();
   } catch (error) {
     setMessage(error.message || "Der Eintrag konnte nicht gespeichert werden.", true);

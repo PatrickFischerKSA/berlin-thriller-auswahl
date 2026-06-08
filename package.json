@@ -1,7 +1,7 @@
 {
   "name": "berlin-thriller-auswahl",
   "version": "1.0.0",
-  "description": "Auswahlformular fuer das Webspecial Topographie des Verbrechens - Berlin-Thriller.",
+  "description": "Auswahlformular für das Webspecial Topographie des Verbrechens - Berlin-Thriller.",
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
