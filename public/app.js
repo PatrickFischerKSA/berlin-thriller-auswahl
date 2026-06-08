@@ -30,6 +30,19 @@ function readerLine(readers) {
     .join("<br>");
 }
 
+function materialLink(text) {
+  if (!text.materialUrl) return "";
+
+  return `
+    <p class="materials">
+      <span>Infomaterial</span>
+      <a href="${escapeHtml(text.materialUrl)}" target="_blank" rel="noreferrer">
+        ${escapeHtml(text.materialLabel || "Material öffnen")}
+      </a>
+    </p>
+  `;
+}
+
 function renderOptions(texts) {
   const currentValue = textSelect.value;
   textSelect.innerHTML = '<option value="">Bitte wählen</option>';
@@ -70,6 +83,7 @@ function renderTexts(texts) {
             <span class="badge ${badgeClass}">${escapeHtml(badgeText)}</span>
           </div>
           <p class="context">${escapeHtml(text.context)}</p>
+          ${materialLink(text)}
           <p class="readers">${readerLine(text.readers)}</p>
         </article>
       `;

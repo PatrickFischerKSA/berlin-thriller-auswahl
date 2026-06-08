@@ -42,4 +42,4 @@ Das Projekt ist GitHub-fähig und kann als kostenloser Render Web Service deploy
 
 ## Pflege der Texte
 
-Die Textliste liegt in `data/texts.json`. Dort können Titel, Kurzbeschreibung und Videoquelle angepasst werden.
+Die Textliste liegt in `data/texts.json`. Dort können Titel, Kurzbeschreibung, Videoquelle und Materiallink angepasst werden. Die aktuellen Materiallinks stammen aus den eingebetteten YouTube-Karten der Craft-Vorlage.
