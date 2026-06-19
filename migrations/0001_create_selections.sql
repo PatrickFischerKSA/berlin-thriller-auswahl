@@ -11,18 +11,3 @@ create table if not exists selections (
 
 create index if not exists idx_selections_text_id on selections (text_id);
 create index if not exists idx_selections_created_at on selections (created_at);
-
-create trigger if not exists selections_block_fourth_reader
-before insert on selections
-when (select count(*) from selections where text_id = new.text_id) >= 3
-begin
-  select raise(abort, 'TEXT_FULL');
-end;
-
-create trigger if not exists selections_require_third_slot_approval
-before insert on selections
-when (select count(*) from selections where text_id = new.text_id) >= 2
-  and coalesce(new.third_slot_approved, 0) != 1
-begin
-  select raise(abort, 'THIRD_SLOT_REQUIRES_APPROVAL');
-end;

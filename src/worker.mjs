@@ -46,7 +46,7 @@ async function createD1Selection(db, payload) {
   const studentNameNorm = normalizeName(entry.studentName).toLocaleLowerCase("de-CH");
 
   try {
-    await db
+    const insertResult = await db
       .prepare(
         `insert into selections (
           id,
@@ -66,7 +66,12 @@ async function createD1Selection(db, payload) {
           ?5,
           case when (select count(*) from selections where text_id = ?2) >= 2 then 1 else 0 end,
           ?6,
-          ?7`
+          ?7
+        where (select count(*) from selections where text_id = ?2) < 3
+          and (
+            (select count(*) from selections where text_id = ?2) < 2
+            or ?6 = 1
+          )`
       )
       .bind(
         entry.id,
@@ -78,6 +83,18 @@ async function createD1Selection(db, payload) {
         entry.createdAt
       )
       .run();
+
+    if (insertResult.meta?.changes === 0) {
+      const readers = currentEntries.filter((currentEntry) => currentEntry.textId === entry.textId);
+      if (readers.length >= 3) {
+        return { ok: false, status: 409, message: "Dieser Text ist bereits voll belegt." };
+      }
+      return {
+        ok: false,
+        status: 409,
+        message: "Der dritte Platz ist nur nach Absprache gedacht. Bitte bestätige die Absprache."
+      };
+    }
 
     const saved = await db.prepare("select * from selections where id = ?1").bind(entry.id).first();
     return {
@@ -99,18 +116,6 @@ async function createD1Selection(db, payload) {
         ok: false,
         status: 409,
         message: "Für diesen Namen gibt es bereits einen Eintrag. Bestehende Einträge werden nicht überschrieben."
-      };
-    }
-
-    if (message.includes("TEXT_FULL")) {
-      return { ok: false, status: 409, message: "Dieser Text ist bereits voll belegt." };
-    }
-
-    if (message.includes("THIRD_SLOT_REQUIRES_APPROVAL")) {
-      return {
-        ok: false,
-        status: 409,
-        message: "Der dritte Platz ist nur nach Absprache gedacht. Bitte bestätige die Absprache."
       };
     }
 
