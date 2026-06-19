@@ -1,7 +1,3 @@
-import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
-import { dirname } from "node:path";
-import { randomUUID } from "node:crypto";
-
 export const REGULAR_LIMIT = 2;
 export const HARD_LIMIT = 3;
 
@@ -22,23 +18,6 @@ export function publicEntry(entry) {
   };
 }
 
-export async function readJsonFile(file, fallback) {
-  try {
-    const raw = await readFile(file, "utf8");
-    return JSON.parse(raw);
-  } catch (error) {
-    if (error.code === "ENOENT") return fallback;
-    throw error;
-  }
-}
-
-export async function writeJsonFile(file, data) {
-  await mkdir(dirname(file), { recursive: true });
-  const tmp = `${file}.${process.pid}.${Date.now()}.tmp`;
-  await writeFile(tmp, `${JSON.stringify(data, null, 2)}\n`, "utf8");
-  await rename(tmp, file);
-}
-
 export function buildStatus(texts, entries) {
   return texts.map((text) => {
     const readers = entries.filter((entry) => entry.textId === text.id).map(publicEntry);
@@ -55,7 +34,7 @@ export function buildStatus(texts, entries) {
   });
 }
 
-export function createSelection({ texts, entries, payload, now = new Date() }) {
+export function createSelection({ texts, entries, payload, now = new Date(), idFactory = () => crypto.randomUUID() }) {
   const textId = String(payload.textId || "");
   const studentName = normalizeName(payload.studentName);
   const groupName = normalizeName(payload.groupName);
@@ -94,7 +73,7 @@ export function createSelection({ texts, entries, payload, now = new Date() }) {
   }
 
   const entry = {
-    id: randomUUID(),
+    id: idFactory(),
     textId,
     studentName,
     groupName,

@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "berlin-thriller-auswahl",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-06-19",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "berlin_thriller_auswahl",
+      "database_id": "00000000-0000-0000-0000-000000000000"
+    }
+  ]
+}

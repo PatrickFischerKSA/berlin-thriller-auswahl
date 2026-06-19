@@ -1,0 +1,85 @@
+export const texts = [
+  {
+    id: "nasse-fisch",
+    title: "Der nasse Fisch",
+    author: "Volker Kutscher",
+    context:
+      "Erster Roman der Gereon-Rath-Reihe: illegale Waffenlieferungen an Deutschland aus der UdSSR, Straßenkämpfe in Berlin, späte Weimarer Republik 1929.",
+    source: "Carlsen Verlag",
+    videoLength: "1:07 min",
+    materialUrl: "https://www.youtube.com/watch?v=ayJ-SrJvgcc",
+    materialLabel: "Originalvideo öffnen"
+  },
+  {
+    id: "maerzgefallenen",
+    title: "Die Märzgefallenen",
+    author: "Volker Kutscher",
+    context: "Berlin im Frühjahr 1933: Kommissar Gereon Rath zwischen Anpassung und Widerstand.",
+    source: "Buchvorstellung247",
+    videoLength: "2:45 min",
+    materialUrl: "https://www.youtube.com/watch?v=w_YN4xSAQwc",
+    materialLabel: "Originalvideo öffnen"
+  },
+  {
+    id: "lunapark",
+    title: "Lunapark",
+    author: "Volker Kutscher",
+    context: "Berlin im Jahr 1934: Röhmputsch und Alltag in der sich verfestigenden Diktatur.",
+    source: "Buchvorstellung247",
+    videoLength: "2:37 min",
+    materialUrl: "https://www.youtube.com/watch?v=XUxZKmaileU",
+    materialLabel: "Originalvideo öffnen"
+  },
+  {
+    id: "olympia",
+    title: "Olympia",
+    author: "Volker Kutscher",
+    context:
+      "Berlin inszeniert 1936 eine Propagandashow und versucht sich im besten Licht zu präsentieren; die Diktatur bleibt bestehen und verschärft ihre Massnahmen nach den Spielen wieder.",
+    source: "Hörbuch Thriller",
+    videoLength: "8:28 min",
+    materialUrl: "https://www.youtube.com/watch?v=4wntvctcVio",
+    materialLabel: "Originalvideo öffnen"
+  },
+  {
+    id: "wie-sterben-geht",
+    title: "Wie Sterben geht",
+    author: "Andreas Pflüger",
+    context: "Agententhriller um Spione des KGB und des BND; Agentenaustausch auf der Glienicker Brücke 1980-83.",
+    source: "Google Play Bücher",
+    videoLength: "5:25 min",
+    materialUrl: "https://www.youtube.com/watch?v=Iljq4vt6_mw",
+    materialLabel: "Originalvideo öffnen"
+  },
+  {
+    id: "kaelter",
+    title: "Kälter",
+    author: "Andreas Pflüger",
+    context:
+      "Spionagethriller im Jahr 1989: Mauerfall, BND- und KGB-Spione sowie in der DDR untergetauchte RAF-Terroristen.",
+    source: "Suhrkamp Verlag",
+    videoLength: "8:40 min",
+    materialUrl: "https://www.youtube.com/watch?v=s-nDNQK2NRg",
+    materialLabel: "Originalvideo öffnen"
+  },
+  {
+    id: "weisse-nacht",
+    title: "Die weisse Nacht",
+    author: "Anne Stern",
+    context: "Ruinenmörder 1946 nach dem Kriegsende in Berlin, Stunde Null und beginnender Kalter Krieg.",
+    source: "Matthias Zehnder",
+    videoLength: "13:18 min",
+    materialUrl: "https://www.youtube.com/watch?v=6_pRQx__ook",
+    materialLabel: "Originalvideo öffnen"
+  },
+  {
+    id: "fraeulein-gold",
+    title: "Fräulein Gold, Bände 1 und 2",
+    author: "Anne Stern",
+    context: "Schatten und Licht sowie Scheunenkinder: historische Kriminalromane mit Berlin-Bezug.",
+    source: "HUGENDUBEL",
+    videoLength: "1:44 min",
+    materialUrl: "https://www.youtube.com/watch?v=dKBe2QCvDPk",
+    materialLabel: "Originalvideo öffnen"
+  }
+];
